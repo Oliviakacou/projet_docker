@@ -1,4 +1,3 @@
-// eslint.config.js
 const jestPlugin = require('eslint-plugin-jest');
 
 module.exports = [
