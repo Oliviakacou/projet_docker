@@ -6,8 +6,10 @@ app.get('/', (req, res) => {
   res.send('Hello Docker + CI/CD!');
 });
 
-app.listen(PORT, () => {
+// On lance le serveur seulement si ce fichier est exécuté directement
+const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-module.exports = app;
+// On exporte à la fois l'app et le serveur pour les tests
+module.exports = { app, server };

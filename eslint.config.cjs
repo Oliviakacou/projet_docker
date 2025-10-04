@@ -1,33 +1,32 @@
-// eslint.config.cjs
-const js = require('@eslint/js');
+// eslint.config.mjs
+import js from "@eslint/js";
 
-module.exports = [
+export default [
   js.configs.recommended,
   {
+    files: ["**/*.js"],
+    ignores: ["node_modules/**"],
     languageOptions: {
-      parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'script' // pour CommonJS
-      },
-      globals: {
-        // Globals Node.js
-        console: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        __dirname: 'readonly',
-
-        // Globals Jest
-        test: 'readonly',
-        it: 'readonly',
-        expect: 'readonly',
-        describe: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly'
-      }
+      ecmaVersion: "latest",
+      sourceType: "commonjs"
     },
     rules: {
-      semi: ['error', 'always'],
-      quotes: ['error', 'single']
+      "no-unused-vars": "warn",
+      "no-console": "off"
+    }
+  },
+  {
+    files: ["tests/**", "**/*.test.js"],
+    languageOptions: {
+      globals: {
+        test: "readonly",
+        expect: "readonly", 
+        describe: "readonly",
+        beforeAll: "readonly",
+        beforeEach: "readonly",
+        afterAll: "readonly",
+        afterEach: "readonly"
+      }
     }
   }
 ];

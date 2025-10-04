@@ -1,0 +1,26 @@
+# Node modules locaux (on installe dans l'image)
+node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Fichiers de tests
+tests
+*.test.js
+
+# Configurations locales
+.vscode
+.idea
+.DS_Store
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+
+# Git
+.git
+.gitignore
+
+# ESLint / autres configs locales
+.eslintrc.js
+.eslint.config.cjs
