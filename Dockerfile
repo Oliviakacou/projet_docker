@@ -1,5 +1,5 @@
 # Image de base
-FROM node:18-alpine
+FROM node:18-bullseye
 
 # Répertoire de travail
 WORKDIR /app
