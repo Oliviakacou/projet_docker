@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "supertest": "^7.1.4"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
